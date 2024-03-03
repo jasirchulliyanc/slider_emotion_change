@@ -111,10 +111,12 @@ class _PathExampleState extends State<PathExample> {
                     width: teethWidth2,
                     height: teethHeight2,
                     decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(15),
-                            topRight: Radius.circular(15))),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(15),
+                        topRight: Radius.circular(15),
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     width: 3,
@@ -224,12 +226,7 @@ class PathPainter extends CustomPainter {
       ..strokeWidth = 8.0;
 
     Path path = Path();
-    // path.moveTo(size.width / 2, size.height / 2);
     path.moveTo(0, size.height / 2);
-    // path.quadraticBezierTo(
-    //     size.width / 2, size.height, size.width, size.height / 2);
-    print(size.height);
-
     path.quadraticBezierTo(
         size.width / 2, lipHieght, size.width, size.height / 2);
     canvas.drawPath(path, paint);
